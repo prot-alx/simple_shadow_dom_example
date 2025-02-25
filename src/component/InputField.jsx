@@ -1,6 +1,9 @@
+import { observer } from 'mobx-react';
 import formStore from '../store/formStore';
 
-const InputField = () => {
+const InputField = observer(() => {
+  console.log('InputField render');
+
   return (
     <input
       type="text"
@@ -9,6 +12,6 @@ const InputField = () => {
       placeholder="Введите имя"
     />
   );
-};
+});
 
 export default InputField;

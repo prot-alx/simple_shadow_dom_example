@@ -1,7 +1,10 @@
+import { observer } from 'mobx-react';
 import SubmittedNameItem from './SubmittedNameItem';
 import formStore from '../store/formStore';
 
-const SubmittedNamesList = () => {
+const SubmittedNamesList = observer(() => {
+  console.log('SubmittedNamesList render');
+
   return (
     <div>
       <h4>Отправленные имена:</h4>
@@ -12,6 +15,6 @@ const SubmittedNamesList = () => {
       </ul>
     </div>
   );
-};
+});
 
 export default SubmittedNamesList;
